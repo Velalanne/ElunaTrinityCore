@@ -1351,6 +1351,7 @@ public:
 
         stmt = LoginDatabase.GetPreparedStatement(LOGIN_SEL_BNET_ITEM_APPEARANCES);
         stmt->setUInt32(0, battlenetAccountId);
+        stmt->setUInt32(1, battlenetAccountId);
         ok = SetPreparedQuery(ITEM_APPEARANCES, stmt) && ok;
 
         stmt = LoginDatabase.GetPreparedStatement(LOGIN_SEL_BNET_ITEM_FAVORITE_APPEARANCES);
